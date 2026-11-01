@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Великие географические открытия</title>
+<meta name="description" content="Интерактивный объяснятор по географии для 5 класса по учебнику А. И. Алексеева: история географических открытий и подготовка к заданиям 4–6 ВПР.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- the fonts do not block the first paint: if Google Fonts is slow or blocked, the page shows the fallback fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800;900&family=Golos+Text:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #efe4c8; --panel: #fbf6e8; --line: #d5c299; --fg: #1d2638; --muted: #5d5a4c;
+  --navy: #1d4277; --navy2: #132d55; --gold: #a67a1c; --gold2: #e0b450; --red: #b5312a;
+  --frame: repeating-linear-gradient(90deg, var(--fg) 0 30px, var(--panel) 30px 60px);
+  --lift: 0 16px 30px -22px rgba(40, 40, 30, .5), 0 2px 6px -2px rgba(40, 40, 30, .16);
+  --display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --body: "Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; color: var(--fg); font: 18px/1.5 var(--body);
+  /* parchment, as in the explainer */
+  background:
+    radial-gradient(700px 420px at 18% 22%, rgba(255, 250, 232, .6), transparent 70%),
+    radial-gradient(1200px 800px at 50% 50%, transparent 60%, rgba(120, 95, 50, .22)),
+    var(--bg);
+  background-attachment: fixed;
+}
+main { max-width: 980px; margin: 0 auto; padding: 40px 24px 70px; }
+.frame { height: 10px; background: var(--frame); border: 2px solid var(--fg); border-radius: 1px; }
+h1 { font: 900 46px/1.1 var(--display); margin: 30px 0 12px; color: var(--navy2); }
+.lead { color: var(--muted); font-size: 20px; margin: 0 0 30px; max-width: 720px; }
+.card { display: grid; grid-template-columns: 240px 1fr; gap: 26px; align-items: center; padding: 26px; border-radius: 8px; background: var(--panel);
+  border: 2px solid var(--fg); box-shadow: inset 0 0 0 4px var(--panel), inset 0 0 0 5px var(--gold2), var(--lift); color: inherit; text-decoration: none;
+  transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-4px); }
+.card:focus-visible { outline: 3px solid var(--navy); outline-offset: 4px; }
+.card svg { width: 100%; height: auto; display: block; }
+.card h2 { font: 800 28px/1.2 var(--display); margin: 0 0 8px; }
+.card p { margin: 0 0 8px; color: var(--muted); }
+.card ul { margin: 0 0 14px; padding-left: 20px; color: var(--muted); font-size: 16px; columns: 2; column-gap: 28px; }
+.go { display: inline-flex; align-items: center; gap: 8px; color: #fff; font-weight: 700; font-size: 17px; padding: 10px 18px; border-radius: 10px;
+  background: linear-gradient(180deg, #2b5ea6, var(--navy2)); box-shadow: 0 4px 0 var(--gold); }
+.foot { margin-top: 36px; color: var(--muted); font-size: 15px; }
+@media (max-width: 720px) {
+  main { padding: 24px 16px 50px; }
+  h1 { font-size: 32px; }
+  .lead { font-size: 18px; }
+  .card { grid-template-columns: 1fr; gap: 14px; padding: 20px; }
+  .card svg { max-width: 240px; }
+  .card ul { columns: 1; }
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="frame"></div>
+  <h1>Великие географические открытия</h1>
+  <p class="lead">Интерактивный объяснятор по географии для 5 класса. Проплыви маршрутами Колумба, Магеллана и Беллинсгаузена, сравни экспедиции на карте и потренируйся решать задания 4–6 ВПР.</p>
+  <a class="card" href="geo-otkrytiya-5-klass.html">
+    <svg viewBox="0 0 240 170" aria-hidden="true">
+      <rect width="240" height="170" rx="6" fill="#bcd8db" stroke="#1d2638" stroke-width="3"/>
+      <path d="M0 85H240" stroke="#b5312a" stroke-width="2" stroke-dasharray="7 5"/>
+      <path d="M0 58H240M0 112H240" stroke="#1d4277" stroke-width="1.5" stroke-dasharray="7 5" opacity=".5"/>
+      <path d="M118 30C132 26 150 34 152 48S146 70 140 82 138 104 128 118 112 128 108 112 112 92 106 80 98 60 104 46 108 32 118 30Z" fill="#f3e6c4" stroke="#7d6a45" stroke-width="2"/>
+      <path d="M30 40C44 34 62 38 66 50S60 66 56 74 62 92 56 108 46 136 40 132 36 110 34 96 22 76 24 58Z" fill="#f3e6c4" stroke="#7d6a45" stroke-width="2"/>
+      <path d="M160 34C180 26 214 30 224 44S210 64 196 66 172 60 162 52Z" fill="#f3e6c4" stroke="#7d6a45" stroke-width="2"/>
+      <path d="M100 40C84 50 70 70 76 96S96 136 130 140 170 122 182 100" fill="none" stroke="#b5312a" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0"/>
+      <path d="M176 104 183 99 184 108Z" fill="#b5312a"/>
+      <g transform="translate(200 132)"><circle r="20" fill="#fbf6e8" stroke="#1d2638" stroke-width="2"/><path d="M0 -18 4 -4 0 0 -4 -4ZM0 18 -4 4 0 0 4 4Z" fill="#a67a1c"/><path d="M0 -18 4 -4 0 0Z" fill="#b5312a"/></g>
+    </svg>
+    <div>
+      <h2>Кто и как открывал Землю</h2>
+      <p>10 интерактивных объяснений с картами, сравнение маршрутов, тренажёр ВПР и шпаргалка.</p>
+      <ul>
+        <li>Как читать карту путешествий</li>
+        <li>Марко Поло и Афанасий Никитин</li>
+        <li>Диаш и Васко да Гама</li>
+        <li>Колумб и Кабот</li>
+        <li>Магеллан и Дрейк</li>
+        <li>Тасман и Кук</li>
+        <li>Русские землепроходцы</li>
+        <li>Открытие Антарктиды</li>
+        <li>Полюса и «Кон-Тики»</li>
+        <li>Тренажёр заданий 4–6 ВПР</li>
+      </ul>
+      <span class="go">Начать →</span>
+    </div>
+  </a>
+  <p class="foot">По учебнику: А. И. Алексеев и др. «География. 5 класс», раздел «История географических открытий». Страница ничего не сохраняет и никуда не отправляет то, что ты нажимаешь или пишешь.</p>
+</main>
+</body>
+</html>
